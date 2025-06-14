@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1</title>
+  <link rel="stylesheet" href="ch1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Defeat the Skeleton with a Strong Password!</h1>
+
+    <img src="assests/SkeletonMonster.png" alt="Pixel Skeleton Monster" id="monster" />
+
+    <div class="input-area">
+  <input type="text" id="passwordInput" placeholder="Enter password">
+  <div class="strengthBarContainer">
+    <div id="strengthBar"></div>
+  </div>
+  <button class="pixel-button" onclick="checkPassword()">Enter</button>
+  <div id="resultMessage"></div>
+</div>
+
+    <div id="resultMessage"></div>
+  </div>
+</div>
+
+  <div class="popup hidden" id="successPopup">
+    <div class="popup-content">
+      <h3>Victory!</h3>
+      <p>Strong password created. Skeleton defeated!</p>
+      <p>Remember: Long + Uppercase + lowercase + Numbers + Symbols = 💪</p>
+      <button onclick="goToNextChapter()">Next Chapter ➤</button>
+    </div>
+
+  <audio id="victorySound" src="sounds/victorysound.mp3" preload="auto"></audio>
+  <audio id="warningSound" src="sounds/losingsound.mp3" preload="auto"></audio>
+
+  <script src="ch1script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 2</title>
+  <link rel="stylesheet" href="ch2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Phishing Phantom Strikes!</h1>
+
+    <img src="assests/phantomMonster.png" alt="Phishing Phantom" id="monster" />
+
+    
+    <h1>How to play?</h1>
+    <p>The Phishing Phantom is sending suspicious messages to trick users!</p>
+      <p>Click on all the suspicious parts in the message:</p>
+
+        <img src="assests/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Misspelled or weird email addresses <br>
+        <img src="assests/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Urgent or threatening text <br>
+        <img src="assests/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Unknown or suspicious links <br>
+
+    <div class="email-simulation">
+      <p><strong>From:</strong> <span class="clickable" onclick="flagClue(this)">admin@micr0s0ft-support.com</span></p>
+      <p><strong>Subject:</strong> Urgent Account Suspension</p>
+      <p>Hello User,</p>
+      <p>
+        We noticed unusual activity on your account. Please 
+        <span class="clickable" onclick="flagClue(this)">click here to verify your login</span> 
+        immediately to avoid suspension.
+      </p>
+      <p>Thank you,<br><span class="clickable" onclick="flagClue(this)">Micros0ft Secure Team</span></p>
+    </div>
+
+    <div id="clueCounter">Clues found: 0 / 3</div>
+  </div>
+
+  <div class="popup hidden" id="successPopup">
+    <div class="popup-content">
+      <h3>Phantom Defeated!</h3>
+      <p>You found all the red flags!</p>
+      <p>Always double-check email senders, links, and urgency cues.</p>
+      <button onclick="goToNextChapter()">Finish ➤</button>
+    </div>
+  </div>
+
+  <div class="popup hidden" id="failPopup">
+    <div class="popup-content">
+      <img src="assests/you_died.png" alt="Warning" />
+      <p>That’s not suspicious! Try again!</p>
+      <button onclick="closeFailPopup()">Okay</button>
+    </div>
+  </div>
+
+  <audio id="victorySound" src="sounds/victorysound.mp3" preload="auto"></audio>
+  <audio id="warningSound" src="sounds/losingsound.mp3" preload="auto"></audio>
+
+  <script src="ch2script.js"></script>
+</body>
+</html>

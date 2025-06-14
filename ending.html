@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GOOD JOB</title>
+  <link rel="stylesheet" href="ending.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="particles"></div>
+
+  <div class="intro-container">
+    <img src="assests/Wings.png" alt="Castle Icon" class="castle-image"/>
+    <h1>Congratulations, Digital Guardian!</h1>
+    <div class="description" id="gameDescription"></div>
+    <button id="playButton" onclick="location.href='Welcome.html'">PLAY AGAIN</button>
+  </div>
+
+  <script>
+  const text = `
+    <p>You’ve defeated every Cyber Creep and secured the Password Protector Palace.<br>
+    But your journey continues—your own digital kingdom awaits.</p>
+    <div class="bullet-line"><img src="assests/Sword.png" alt="Bullet">Use strong, unique passwords</div>
+    <div class="bullet-line"><img src="assests/Sword.png" alt="Bullet">Spot phishing traps</div>
+    <div class="bullet-line"><img src="assests/Sword.png" alt="Bullet">Enable two-factor authentication</div>
+    <div class="bullet-line">The palace is safe—because of you.<img src="assests/Heart.png" alt="Bullet"></div>
+  `;
+
+  const desc = document.getElementById("gameDescription");
+  let index = 0;
+
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = text;
+  const fullText = tempDiv.textContent || tempDiv.innerText;
+
+  function typeWriterHTML() {
+    if (index < fullText.length) {
+      desc.innerHTML = fullText.substring(0, index).replace(/\n/g, "<br>");
+      index++;
+      setTimeout(typeWriterHTML, 25);
+    } else {
+      desc.innerHTML = text; // Replace with full HTML once typing completes
+    }
+  }
+
+  typeWriterHTML();
+
+  // Pixel particles animation
+  const particles = document.querySelector(".particles");
+  for (let i = 0; i < 100; i++) {
+    const p = document.createElement("div");
+    p.className = "particle";
+    p.style.left = Math.random() * 100 + "vw";
+    p.style.top = Math.random() * 100 + "vh";
+    p.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    particles.appendChild(p);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAVE THE CASTLE</title>
+  <link rel="stylesheet" href="Welcome.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="particles"></div>
+
+  <div class="intro-container">
+    <img src="assests/CASTLE.png" alt="Castle Icon" class="castle-image"/>
+    <h1>SAVE THE CASTLE</h1>
+    <p class="description" id="gameDescription"></p>
+    <button id="playButton" onclick="location.href='ch1.html'">PLAY NOW</button>
+  </div>
+
+  <script>
+    const text = `Evil monsters have taken over the Password Protector Palace. 
+
+As the Digital Guardian, it's your duty to defeat them with strong passwords, uncover phishing tricks, and restore digital peace.
+
+Learn real cyber skills while having retro fun!`;
+    const desc = document.getElementById("gameDescription");
+    let idx = 0;
+
+    function typeWriter() {
+      if (idx < text.length) {
+        desc.innerHTML += text.charAt(idx);
+        idx++;
+        setTimeout(typeWriter, 25);
+      }
+    }
+    typeWriter();
+
+    const particles = document.querySelector(".particles");
+    for (let i = 0; i < 100; i++) {
+      const p = document.createElement("div");
+      p.className = "particle";
+      p.style.left = Math.random() * 100 + "vw";
+      p.style.top = Math.random() * 100 + "vh";
+      p.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      particles.appendChild(p);
+    }
+  </script>
+</body>
+</html>
