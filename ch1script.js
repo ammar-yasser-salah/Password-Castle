@@ -48,7 +48,7 @@ function calculateStrength(password) {
   if (score >= 4) color = "lime";
   else if (score === 3) color = "orange";
 
-  let message = "Weak password.";
+  let message = "Weak password!!";
   if (score >= 4) message = "Strong password! Skeleton defeated!";
   else if (score === 3) message = "Almost there! Add more variety.";
 
