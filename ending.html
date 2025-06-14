@@ -14,7 +14,7 @@
     <img src="assests/Wings.png" alt="Castle Icon" class="castle-image"/>
     <h1>Congratulations, Digital Guardian!</h1>
     <div class="description" id="gameDescription"></div>
-    <button id="playButton" onclick="location.href='Welcome.html'">PLAY AGAIN</button>
+    <button id="playButton" onclick="location.href='index.html'">PLAY AGAIN</button>
   </div>
 
   <script>
@@ -40,13 +40,12 @@
       index++;
       setTimeout(typeWriterHTML, 25);
     } else {
-      desc.innerHTML = text; // Replace with full HTML once typing completes
+      desc.innerHTML = text; 
     }
   }
 
   typeWriterHTML();
 
-  // Pixel particles animation
   const particles = document.querySelector(".particles");
   for (let i = 0; i < 100; i++) {
     const p = document.createElement("div");
