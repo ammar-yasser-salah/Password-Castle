@@ -11,7 +11,7 @@
   <div class="particles"></div>
 
   <div class="intro-container">
-    <img src="assests/Wings.png" alt="Castle Icon" class="castle-image"/>
+    <img src="assets/Wings.png" alt="Castle Icon" class="castle-image"/>
     <h1>Congratulations, Digital Guardian!</h1>
     <div class="description" id="gameDescription"></div>
     <button id="playButton" onclick="location.href='index.html'">PLAY AGAIN</button>
@@ -21,10 +21,10 @@
   const text = `
     <p>You’ve defeated every Cyber Creep and secured the Password Protector Palace.<br>
     But your journey continues—your own digital kingdom awaits.</p>
-    <div class="bullet-line"><img src="assests/Sword.png" alt="Bullet">Use strong, unique passwords</div>
-    <div class="bullet-line"><img src="assests/Sword.png" alt="Bullet">Spot phishing traps</div>
-    <div class="bullet-line"><img src="assests/Sword.png" alt="Bullet">Enable two-factor authentication</div>
-    <div class="bullet-line">The palace is safe—because of you.<img src="assests/Heart.png" alt="Bullet"></div>
+    <div class="bullet-line"><img src="assets/Sword.png" alt="Bullet">Use strong, unique passwords</div>
+    <div class="bullet-line"><img src="assets/Sword.png" alt="Bullet">Spot phishing traps</div>
+    <div class="bullet-line"><img src="assets/Sword.png" alt="Bullet">Enable two-factor authentication</div>
+    <div class="bullet-line">The palace is safe—because of you.<img src="assets/Heart.png" alt="Bullet"></div>
   `;
 
   const desc = document.getElementById("gameDescription");
@@ -40,7 +40,7 @@
       index++;
       setTimeout(typeWriterHTML, 25);
     } else {
-      desc.innerHTML = text; 
+      desc.innerHTML = text;
     }
   }
 
