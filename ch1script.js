@@ -63,6 +63,17 @@ function playSound(id) {
   }
 }
 
+const particles = document.querySelector(".particles");
+    for (let i = 0; i < 80; i++) {
+      const p = document.createElement("div");
+      p.className = "particle";
+      p.style.left = Math.random() * 100 + "vw";
+      p.style.top = Math.random() * 100 + "vh";
+      p.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      particles.appendChild(p);
+    }
+
+
 function closeFailPopup() {
   const failPopup = document.getElementById("failPopup");
   failPopup.classList.add("hidden");
