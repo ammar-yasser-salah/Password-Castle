@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 4</title>
+  <link rel="stylesheet" href="ch4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="particles"></div>
+
+  <div class="container">
+    <h1>Secret Question Showdown!</h1>
+    <img src="assets/PassMonster.png" alt="Password Monster" id="monster" />
+
+    <p>The password monster is trying to guess your secret question! Pick the strongest, least guessable answer:</p>
+
+    <div class="options">
+      <button class="pixel-button" onclick="pickOption(this)">My dog’s name is Max</button>
+      <button class="pixel-button" onclick="pickOption(this)">I was born in New York</button>
+      <button class="pixel-button" onclick="pickOption(this)">My first concert was Metallica</button> 
+      <button class="pixel-button" onclick="pickOption(this)">123456</button>
+    </div>
+  </div>
+
+  <div class="popup hidden" id="successPopup">
+    <div class="popup-content">
+      <h3>Monster Defeated!</h3>
+      <p>That answer is tough to guess!</p>
+      <p>Well done — always choose answers that aren’t obvious.</p>
+      <button class="pixel-button" onclick="goToNextChapter()">Finish ➤</button>
+    </div>
+  </div>
+
+  <div class="popup hidden" id="failPopup">
+    <div class="popup-content">
+      <p>Oops! That answer is easy to guess.</p>
+      <button class="pixel-button" onclick="closeFailPopup()">Try Again</button>
+    </div>
+  </div>
+
+  <audio id="victorySound" src="sounds/victorysound.mp3" preload="auto"></audio>
+  <audio id="warningSound" src="sounds/losingsound.mp3" preload="auto"></audio>
+
+  <script src="ch4script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 3</title>
+  <link rel="stylesheet" href="ch3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="particles"></div>
+
+  <div class="container">
+    <h1>The Ransomware Raven’s Riddle!</h1>
+
+    <img src="assets/RansomRaven.png" alt="Ransomware Raven" id="monster" />
+
+    <p>The Raven has locked the castle’s files!</p>
+    <p>Match the correct action to save them:</p>
+
+    <div class="choices">
+      <button class="pixel-button" onclick="choose('pay')">Pay the ransom</button>
+      <button class="pixel-button" onclick="choose('backup')">Restore from backup</button>
+      <button class="pixel-button" onclick="choose('ignore')">Ignore the problem</button>
+    </div>
+
+    <div id="resultMessage"></div>
+  </div>
+
+  <div class="popup hidden" id="successPopup">
+    <div class="popup-content">
+      <h3>Files Restored!</h3>
+      <p>Backups saved the day. Never pay the ransom!</p>
+      <p>Keep regular backups and stay protected.</p>
+      <button onclick="goToNextChapter()">Finish ➤</button>
+    </div>
+  </div>
+
+  <div class="popup hidden" id="failPopup">
+    <div class="popup-content">
+      <img src="assets/you_died.png" alt="Warning" />
+      <p>Wrong move! That helped the raven.</p>
+      <button onclick="closeFailPopup()">Try Again</button>
+    </div>
+  </div>
+
+  <audio id="victorySound" src="sounds/victorysound.mp3" preload="auto"></audio>
+  <audio id="warningSound" src="sounds/losingsound.mp3" preload="auto"></audio>
+
+  <script src="ch3script.js"></script>
+</body>
+</html>
