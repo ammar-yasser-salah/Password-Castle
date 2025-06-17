@@ -8,19 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="particles"></div>
+
   <div class="container">
     <h1>Phishing Phantom Strikes!</h1>
 
-    <img src="assests/phantomMonster.png" alt="Phishing Phantom" id="monster" />
+    <img src="assets/PhishingPhantom.png" alt="Phishing Phantom" id="monster" />
 
-    
     <h1>How to play?</h1>
     <p>The Phishing Phantom is sending suspicious messages to trick users!</p>
-      <p>Click on all the suspicious parts in the message:</p>
+    <p>Click on all the suspicious parts in the message:</p>
 
-        <img src="assests/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Misspelled or weird email addresses <br>
-        <img src="assests/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Urgent or threatening text <br>
-        <img src="assests/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Unknown or suspicious links <br>
+    <img src="assets/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Misspelled or weird email addresses <br>
+    <img src="assets/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Urgent or threatening text <br>
+    <img src="assets/Sword.png" alt="Swords" style="width: 16px; height: 16px; vertical-align: middle;"> Unknown or suspicious links <br>
 
     <div class="email-simulation">
       <p><strong>From:</strong> <span class="clickable" onclick="flagClue(this)">admin@micr0s0ft-support.com</span></p>
@@ -42,13 +43,13 @@
       <h3>Phantom Defeated!</h3>
       <p>You found all the red flags!</p>
       <p>Always double-check email senders, links, and urgency cues.</p>
-      <button onclick="goToNextChapter()">Finish ➤</button>
+      <button onclick="goToNextChapter()">Next Chapter ➤</button>
     </div>
   </div>
 
   <div class="popup hidden" id="failPopup">
     <div class="popup-content">
-      <img src="assests/you_died.png" alt="Warning" />
+      <img src="assets/you_died.png" alt="Warning" />
       <p>That’s not suspicious! Try again!</p>
       <button onclick="closeFailPopup()">Okay</button>
     </div>
